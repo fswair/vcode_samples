@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Oyunu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>2048</h1>
+        <div class="score-container">
+            <div class="score-title">Skor</div>
+            <div class="score" id="score">0</div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-cell" id="0-0"></div>
+            <div class="grid-cell" id="0-1"></div>
+            <div class="grid-cell" id="0-2"></div>
+            <div class="grid-cell" id="0-3"></div>
+            <div class="grid-cell" id="1-0"></div>
+            <div class="grid-cell" id="1-1"></div>
+            <div class="grid-cell" id="1-2"></div>
+            <div class="grid-cell" id="1-3"></div>
+            <div class="grid-cell" id="2-0"></div>
+            <div class="grid-cell" id="2-1"></div>
+            <div class="grid-cell" id="2-2"></div>
+            <div class="grid-cell" id="2-3"></div>
+            <div class="grid-cell" id="3-0"></div>
+            <div class="grid-cell" id="3-1"></div>
+            <div class="grid-cell" id="3-2"></div>
+            <div class="grid-cell" id="3-3"></div>
+        </div>
+        <div class="game-over" id="game-over">
+            Oyun Bitti!
+            <div class="restart-button" onclick="restartGame()">Yeniden Başlat</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

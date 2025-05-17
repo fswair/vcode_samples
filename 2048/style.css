@@ -1,0 +1,106 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: #bbada0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #776e65;
+}
+
+.score-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.score-title {
+    font-size: 1.5em;
+    color: #776e65;
+    margin-right: 10px;
+}
+
+.score {
+    font-size: 1.5em;
+    color: white;
+    background-color: #bbada0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    grid-gap: 10px;
+    background-color: #bbada0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.grid-cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(238, 228, 218, 0.35);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #776e65;
+}
+
+.game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: white;
+    flex-direction: column;
+}
+
+.game-over.show {
+    display: flex;
+}
+
+.restart-button {
+    background-color: #8f7a66;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Tile renkleri */
+.tile-2 { background-color: #eee4da; color: #776e65; }
+.tile-4 { background-color: #ede0c8; color: #776e65; }
+.tile-8 { background-color: #f2b179; color: white; }
+.tile-16 { background-color: #f59563; color: white; }
+.tile-32 { background-color: #f67c5f; color: white; }
+.tile-64 { background-color: #f65e3b; color: white; }
+.tile-128 { background-color: #edcf72; color: white; }
+.tile-256 { background-color: #edcc61; color: white; }
+.tile-512 { background-color: #edc850; color: white; }
+.tile-1024 { background-color: #edc53f; color: white; }
+.tile-2048 { background-color: #edc22e; color: white; }
