@@ -66,18 +66,13 @@ h1 {
 }
 
 .game-cell {
-    background-color: #cdc1b4; /* Background for empty cells */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #776e65;
-    border-radius: 5px;
-    /* Use aspect ratio to maintain square cells based on width */
+    background-color: #ccc;
+    border-radius: 8px;
     width: 100%;
-    padding-top: 100%; /* Makes the height equal to the width */
-    position: relative; /* For positioning content inside */
+    padding-top: 100%; /* to maintain square aspect */
+    position: relative;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    overflow: hidden;
 }
 
 .game-cell span {
@@ -85,6 +80,8 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 /* Adjust font size based on board size and screen width */
@@ -162,4 +159,39 @@ h1 {
 
 #try-again-btn:hover {
     background-color: #bbaaa0;
+}
+
+/* Pop animation keyframes */
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Fade-in keyframes */
+@keyframes fadeIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Fade-in effect for new tiles */
+.tile-new {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Merge animation */
+.tile-merged {
+    animation: pop 0.2s ease-out;
 }
