@@ -53,21 +53,32 @@ function addRandomTile() {
 function updateUI() {
     const cells = gameContainer.querySelectorAll('.game-cell');
     cells.forEach((cell, index) => {
-        // Corrected row calculation:
         const row = Math.floor(index / size);
         const col = index % size;
         const tileValue = board[row][col];
-
-        // Update the span inside the cell
         const tileValueSpan = cell.querySelector('span');
+
         tileValueSpan.textContent = tileValue === 0 ? '' : tileValue;
 
-        // Update cell class for styling
-        cell.className = 'game-cell'; // Reset classes
+        // Reset classes
+        cell.className = 'game-cell';
+
         if (tileValue > 0) {
             cell.classList.add(`tile-${tileValue}`);
+
+            if (cell.dataset.prevValue != tileValue) {
+                if (cell.dataset.prevValue && tileValue > cell.dataset.prevValue) {
+                    cell.classList.add('tile-merged');
+                } else {
+                    cell.classList.add('tile-new');
+                }
+            }
         }
+
+        // Kaydet
+        cell.dataset.prevValue = tileValue;
     });
+
     scoreDisplay.textContent = `Score: ${score}`;
 }
 
