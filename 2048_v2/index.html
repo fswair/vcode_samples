@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>2048 Game</h1>
+    <div id="score">Score: 0</div>
+
+    <div id="controls" style="margin-bottom: 20px;">
+        <button id="new-game-btn">New Game</button>
+        <span>Select Size:</span>
+        <button class="size-select-btn" data-size="4">4x4</button>
+        <button class="size-select-btn" data-size="6">6x6</button>
+        <button class="size-select-btn" data-size="8">8x8</button>
+    </div>
+
+    <div id="game-container">
+        <!-- Game board will be inserted here by JavaScript -->
+    </div>
+
+    <!-- Game Status Overlay/Modal -->
+    <div id="game-status-overlay">
+        <div id="game-status-content">
+            <div id="game-status-message"></div>
+            <button id="try-again-btn">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
